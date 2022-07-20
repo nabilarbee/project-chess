@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chess Game!</title>
     <link rel="stylesheet" href="chessboard.css">
-
+    <script src="engine.js"></script>
+    
   </head>
 
   <body>
@@ -16,91 +17,91 @@
     <div class="board">
 
       <div class="row-a rows">
-        <div class="a-1 box clrd">a1</div>  
-        <div class="a-2 box">a2</div>  
-        <div class="a-3 box clrd">a3</div>  
-        <div class="a-4 box">a4</div>  
-        <div class="a-5 box clrd">a5</div>  
-        <div class="a-6 box">a6</div>  
-        <div class="a-7 box clrd">a7</div>  
-        <div class="a-8 box">a8</div> 
+        <div class="box clrd">a1</div>  
+        <div class="box">a2</div>  
+        <div class="box clrd">a3</div>  
+        <div class="box">a4</div>  
+        <div class="box clrd">a5</div>  
+        <div class="box">a6</div>  
+        <div class="box clrd">a7</div>  
+        <div class="box">a8</div> 
       </div>
 
       <div class="row-b rows">
-        <div class="b-1 box">b1</div>  
-        <div class="b-2 box clrd">b2</div>  
-        <div class="b-3 box">b3</div>  
-        <div class="b-4 box clrd">b4</div>  
-        <div class="b-5 box">b5</div>  
-        <div class="b-6 box clrd">b6</div>  
-        <div class="b-7 box">b7</div>  
-        <div class="b-8 box clrd">b8</div> 
+        <div class="box" id="b1" value="pawn">b1</div>  
+        <div class="box clrd">b2</div>  
+        <div class="box">b3</div>  
+        <div class="box clrd">b4</div>  
+        <div class="box">b5</div>  
+        <div class="box clrd">b6</div>  
+        <div class="box">b7</div>  
+        <div class="box clrd">b8</div> 
       </div>
 
       <div class="row-c rows">
-        <div class="c-1 box clrd">c1</div>  
-        <div class="c-2 box">c2</div>  
-        <div class="c-3 box clrd">c3</div>  
-        <div class="c-4 box">c4</div>  
-        <div class="c-5 box clrd">c5</div>  
-        <div class="c-6 box">c6</div>  
-        <div class="c-7 box clrd">c7</div>  
-        <div class="c-8 box">c8</div> 
+        <div class="box clrd">c1</div>  
+        <div class="box">c2</div>  
+        <div class="box clrd">c3</div>  
+        <div class="box">c4</div>  
+        <div class="box clrd">c5</div>  
+        <div class="box">c6</div>  
+        <div class="box clrd">c7</div>  
+        <div class="box">c8</div> 
       </div>
 
       <div class="row-d rows">
-        <div class="d-1 box">d1</div>  
-        <div class="d-2 box clrd">d2</div>  
-        <div class="d-3 box">d3</div>  
-        <div class="d-4 box clrd">d4</div>  
-        <div class="d-5 box">d5</div>  
-        <div class="d-6 box clrd">d6</div>  
-        <div class="d-7 box">d7</div>  
-        <div class="d-8 box clrd">d8</div> 
+        <div class="box">d1</div>  
+        <div class="box clrd">d2</div>  
+        <div class="box">d3</div>  
+        <div class="box clrd">d4</div>  
+        <div class="box">d5</div>  
+        <div class="box clrd">d6</div>  
+        <div class="box">d7</div>  
+        <div class="box clrd">d8</div> 
       </div>
 
       <div class="row-e rows">
-        <div class="e-1 box clrd">e1</div>  
-        <div class="e-2 box">e2</div>  
-        <div class="e-3 box clrd">e3</div>  
-        <div class="e-4 box">e4</div>  
-        <div class="e-5 box clrd">e5</div>  
-        <div class="e-6 box">e6</div>  
-        <div class="e-7 box clrd">e7</div>  
-        <div class="e-8 box">e8</div> 
+        <div class="box clrd">e1</div>  
+        <div class="box">e2</div>  
+        <div class="box clrd">e3</div>  
+        <div class="box">e4</div>  
+        <div class="box clrd">e5</div>  
+        <div class="box">e6</div>  
+        <div class="box clrd">e7</div>  
+        <div class="box">e8</div> 
       </div>
 
       <div class="row-f rows">
-        <div class="f-1 box">f1</div>  
-        <div class="f-2 box clrd">f2</div>  
-        <div class="f-3 box">f3</div>  
-        <div class="f-4 box clrd">f4</div>  
-        <div class="f-5 box">f5</div>  
-        <div class="f-6 box clrd">f6</div>  
-        <div class="f-7 box">f7</div>  
-        <div class="f-8 box clrd">f8</div> 
+        <div class="box">f1</div>  
+        <div class="box clrd">f2</div>  
+        <div class="box">f3</div>  
+        <div class="box clrd">f4</div>  
+        <div class="box">f5</div>  
+        <div class="box clrd">f6</div>  
+        <div class="box">f7</div>  
+        <div class="box clrd">f8</div> 
       </div>
 
       <div class="row-g rows">
-        <div class="g-1 box clrd">g1</div>  
-        <div class="g-2 box">g2</div>  
-        <div class="g-3 box clrd">g3</div>  
-        <div class="g-4 box">g4</div>  
-        <div class="g-5 box clrd">g5</div>  
-        <div class="g-6 box">g6</div>  
-        <div class="g-7 box clrd">g7</div>  
-        <div class="g-8 box">g8</div> 
+        <div class="box clrd">g1</div>  
+        <div class="box">g2</div>  
+        <div class="box clrd">g3</div>  
+        <div class="box">g4</div>  
+        <div class="box clrd">g5</div>  
+        <div class="box">g6</div>  
+        <div class="box clrd">g7</div>  
+        <div class="box">g8</div> 
       </div>
 
       <div class="row-h rows">
-        <div class="h-1 box">h1</div>  
-        <div class="h-2 box clrd">h2</div>  
-        <div class="h-3 box">h3</div>  
-        <div class="h-4 box clrd">h4</div>  
-        <div class="h-5 box">h5</div>  
-        <div class="h-6 box clrd">h6</div>  
-        <div class="h-7 box">h7</div>  
-        <div class="h-8 box clrd">h8</div> 
+        <div class="box">h1</div>  
+        <div class="box clrd">h2</div>  
+        <div class="box">h3</div>  
+        <div class="box clrd">h4</div>  
+        <div class="box">h5</div>  
+        <div class="box clrd">h6</div>  
+        <div class="box">h7</div>  
+        <div class="box clrd">h8</div> 
       </div>
 
     </div>
